@@ -1,15 +1,27 @@
-{
-  "manifest_version": 2,
-  "name": "My Cool Extension",
-  "version": "0.1",
-    
-    "content_scripts": [
   {
-    "matches": [
-      "<all_urls>"
-    ],
-    "js": ["jquery-3.3.1.min.js", "content.js"]
+    "name": "My name is Fera$$",
+    "description" : "Base Level Extension",
+    "version": "1.0",
+    "icons" : {
+      "128" : "hello_extension128.png",
+      "16" :  "hello_extension16.png",
+      "48" : "hello_extension48.png"
+    },
+    "manifest_version": 2,
+    
+    
+    "browser_action": {
+      "default_popup": "hello.html"
+    },
+    
+      "commands": {
+      "_execute_browser_action": {
+        "suggested_key": {
+          "default": "Ctrl+Shift+F",
+           "mac": "MacCtrl+Shift+F"
+        },
+        
+        "description": "Opens hello.html"
+      }
+    }
   }
-]
-}
-
